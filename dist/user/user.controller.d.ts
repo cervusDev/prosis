@@ -10,7 +10,7 @@ export declare class UserController {
         username: string;
         email: string;
     }>;
-    findAll(): string;
+    findAll(): import(".prisma/client").PrismaPromise<import(".prisma/client").User[]>;
     findOne(id: number): import(".prisma/client").Prisma.Prisma__UserClient<import(".prisma/client").User>;
     update(id: number, updateUserDto: UpdateUserDto): string;
     remove(id: number): string;

@@ -11,7 +11,7 @@ export declare class UserService {
         username: string;
         email: string;
     }>;
-    findAll(): string;
+    findAll(): import(".prisma/client").PrismaPromise<import(".prisma/client").User[]>;
     findById(id: number): Prisma.Prisma__UserClient<import(".prisma/client").User>;
     findByEmail(email: string): Prisma.Prisma__UserClient<import(".prisma/client").User>;
     update(id: number, updateUserDto: UpdateUserDto): string;

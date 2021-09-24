@@ -23,7 +23,7 @@ let UserService = class UserService {
         return Object.assign(Object.assign({}, createdUser), { password: undefined });
     }
     findAll() {
-        return `This action returns all user`;
+        return this.prisma.user.findMany();
     }
     findById(id) {
         return this.prisma.user.findUnique({ where: { id } });
