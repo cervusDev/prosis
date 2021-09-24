@@ -14,6 +14,7 @@ async function bootstrap() {
   );
 
   app.useGlobalInterceptors(new UnauthorizedInterceptor());
+  app.enableCors();
   await app.listen(process.env.PORT || 3001);
 }
 

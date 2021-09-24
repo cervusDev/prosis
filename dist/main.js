@@ -12,6 +12,7 @@ async function bootstrap() {
         transform: true,
     }));
     app.useGlobalInterceptors(new unauthorized_interceptor_1.UnauthorizedInterceptor());
+    app.enableCors();
     await app.listen(process.env.PORT || 3001);
 }
 bootstrap();
